@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7vh;
+  background-color: blue;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  h1 {
+    margin: 0
+  }
+}
+
+header {
+  height: 93vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: rgb(250,250,250);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  div {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+
+    img {
+      width: 100%;
+      opacity: 0.5;
+      transition: 0.2s;
+      cursor: pointer;
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .hidden-illustration {
+      display: none;
+    }
+    
+    .full-screen-illustration {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255,255,255,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+
+      // & > svg {
+      //   background-color: white;
+      // }
+
+      //First illustration: running line
+      #top_leaf {
+        animation: leaf 2s ease infinite;
+        transform-origin: bottom right;
+        transform-box: fill-box;
+        transform: rotate(10deg);
+    }
+    
+    #bottom_leaf {
+        animation: leaf 2s linear infinite;
+        transform-origin: top right;
+        transform-box: fill-box;
+        transform: rotate(10deg);
+    }
+    
+    #legs {
+        animation: bounceUp 2s linear infinite;
+        transform-origin: top;
+        transform-box: fill-box;
+    }
+    
+    #hair_bottom {
+        animation: bounceUp 2s ease infinite;
+        transform-origin: bottom;
+        transform-box: fill-box;
+    }
+    
+    #hair_bottom, #hair_top {
+        animation: hairFlow 2s linear infinite;
+        transform-origin: top right;
+        transform-box: fill-box;
+    }
+    
+    #upper_body, #hair_bottom, #hair_top {
+        animation: sideToSide 2s linear infinite;
+        transform-origin: bottom;
+        transform-box: fill-box;
+        transform: rotate(-1deg);
+    }
+    
+    #ribbon_left {
+        animation: sideToSide 2s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+        transform: rotate(-1deg);
+    }
+    
+    #ribbon_right {
+        transform: rotate(7deg) scaleX(0.9) translate(0, 60%);
+        animation: zAxis 2s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    
+    @keyframes leaf {
+        0% {
+            transform: translate(0,0) rotate(10deg);
+        }
+        
+        50% {
+            transform: translate(0, -10%) rotate(30deg);
+        }
+    
+        100% {
+            transform: translate(0,0) rotate(10deg);
+        }
+    }
+    
+    @keyframes bounceUp {
+        0% {
+            transform: rotateX(0)
+        }
+    
+        50% {
+            transform: rotateX(-20deg)
+        }
+    
+        100% {
+            transform: rotateX(0)
+        }
+    }
+    
+    @keyframes hairFlow {
+        0% {
+            transform: rotate(0)
+        }
+    
+        50% {
+            transform: rotate(5deg)
+        }
+    
+        100% {
+            transform: rotate(0)
+        }
+    }
+    
+    @keyframes sideToSide {
+        0% {
+            transform: rotate(-1deg)
+        }
+    
+        50% {
+            transform: rotate(1deg)
+        }
+    
+        100% {
+            transform: rotate(-1deg)
+        }
+    }
+    
+    @keyframes zAxis {
+        0% {
+            /* transform: rotate(-1deg) */
+            transform: rotate(5deg) scaleX(0.9) translate(0, 60%);
+        }
+    
+        50% {
+            /* transform: rotate(1deg) */
+            transform: rotate(10deg) scaleX(1) translate(0, 30%)
+        }
+    
+        100% {
+            /* transform: rotate(-1deg) */
+            transform: rotate(5deg) scaleX(0.9) translate(0, 60%);
+        }
+    
+    }
+
+    //Second illustration: tea
+    //We create a mixin so we can use the same animation with different values for several elements
+@mixin keyframes-animation($anim-name, $clip-url, $rotation0, $rotation25, $rotation50, $rotation75, $pos0, $pos-25, $pos-50, $pos-75) {
+  @keyframes #{$anim-name} {
+    0% {
+      clip-path: url($clip-url);
+      transform: scale(0) rotate($rotation0 + deg) translate($pos0 + vw, $pos0 + vh);
+      opacity: 0;
+    }
+    25% {
+      clip-path: url($clip-url);
+      transform: scale(0.25) rotate($rotation25 + deg) translate($pos-25 + vw, $pos-25 + vh);
+      opacity: 0.25;
+    }
+    50% {
+      clip-path: url($clip-url);
+      transform: scale(0.5) rotate($rotation50 + deg) translate($pos-50 + vw, $pos-50 + vh);
+      opacity: 0.5;
+    }
+    75% {
+      clip-path: url($clip-url);
+      transform: scale(0.5) rotate($rotation75 + deg) translate($pos-75 + vw, $pos-75 + vh);
+      opacity: 0.75;
+    }
+    100% {
+      clip-path: none;
+      transform: scale(1) rotate(0deg) translate(0,0);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+      transform: rotate(0)
+  }
+
+  33% {
+      transform: rotate(-5deg)
+  }
+
+  66% {
+    transform: rotate(5deg)
+  }
+
+  100% {
+      transform: rotate(0)
+  }
+}
+
+//Function so we can get a random number within a range (we need negative numbers)
+//Source: https://stackoverflow.com/questions/41096204/how-to-generate-a-random-number-within-a-min-and-max-parameters-in-sass
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+  
+  @return $randomNum;
+}
+
+
+#plate {
+  transform-origin: 50% 80%;
+  @include keyframes-animation("bubble-plate", "#blob1", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-plate 2s ease-in;
+}
+
+#cup_shadow {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-cup-sh", "#blob2", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-cup-sh 2s ease-in;
+}
+
+#cup {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-cup", "#blob3", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-cup 2s ease-in;
+}
+
+#tea {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-tea", "#blob4", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-tea 2s ease-in;
+}
+
+#teabag {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-teabag", "#blob5", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-teabag 2s ease-in;
+}
+
+#bubble1 {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-1", "#blob1", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-1 2s ease-in;
+}
+
+#bubble2 {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-2", "#blob2", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-2 2s ease-in;
+}
+
+#bubble3 {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-3", "#blob3", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-3 2s ease-in;
+}
+
+#leaf1 {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-leaf1", "#blob4", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-leaf1 2s ease-in;
+}
+
+#leaf2 {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-leaf2", "#blob5", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-leaf2 2s ease-in;
+}
+
+#leaf3 {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-leaf3", "#blob1", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-leaf3 2s ease-in;
+}
+
+#tea_overlay {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-tea-ov", "#blob2", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-tea-ov 2s ease-in;
+}
+
+#teabag_label {
+  transform-origin: 50% 70%;
+  @include keyframes-animation("bubble-teabag-lb", "#blob3", random(360), random(360), random(360), random(360), randomNum(-100, 100), randomNum(-100, 100), randomNum(-50, 50), randomNum(-50, 50));
+  animation: bubble-teabag-lb 2s ease-in;
+}
+
+//TODO add sound??
+//and do the last animation separately
+
+svg.tea-svg {
+  transform-origin: bottom;
+  animation: bounce 2s infinite linear;
+  animation-delay: 2s;
+}
+
+    }
+  }
+}
