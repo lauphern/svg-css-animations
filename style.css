@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap");
 body {
   margin: 0;
 }
@@ -6,6 +7,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -13,14 +18,21 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 7vh;
-  background-color: blue;
+  background-color: #B4E7CE;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 1rem;
+  font-family: "Lato", Helvetica, sans-serif;
 }
 
 nav h1 {
   margin: 0;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
 }
 
 header {
@@ -69,7 +81,7 @@ header div .full-screen-illustration {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,6 +147,14 @@ header div .full-screen-illustration #upper_body, header div .full-screen-illust
   transform-box: fill-box;
   -webkit-transform: rotate(-1deg);
           transform: rotate(-1deg);
+}
+
+header div .full-screen-illustration #hair_top {
+  -webkit-animation: moveHairTop 2s linear infinite;
+          animation: moveHairTop 2s linear infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  transform-box: fill-box;
 }
 
 header div .full-screen-illustration #ribbon_left {
@@ -313,6 +333,36 @@ header div .full-screen-illustration #ribbon_right {
   }
 }
 
+@-webkit-keyframes moveHairTop {
+  0% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  50% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+}
+
+@keyframes moveHairTop {
+  0% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  50% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+}
+
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: rotate(0);
@@ -362,29 +412,29 @@ header div .full-screen-illustration #plate {
   0% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0) rotate(359deg) translate(-50vw, -50vh);
-            transform: scale(0) rotate(359deg) translate(-50vw, -50vh);
+    -webkit-transform: scale(0) rotate(200deg) translate(66vw, 66vh);
+            transform: scale(0) rotate(200deg) translate(66vw, 66vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.25) rotate(190deg) translate(-23vw, -23vh);
-            transform: scale(0.25) rotate(190deg) translate(-23vw, -23vh);
+    -webkit-transform: scale(0.25) rotate(144deg) translate(-98vw, -98vh);
+            transform: scale(0.25) rotate(144deg) translate(-98vw, -98vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(147deg) translate(-49vw, -49vh);
-            transform: scale(0.5) rotate(147deg) translate(-49vw, -49vh);
+    -webkit-transform: scale(0.5) rotate(22deg) translate(39vw, 39vh);
+            transform: scale(0.5) rotate(22deg) translate(39vw, 39vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(225deg) translate(-34vw, -34vh);
-            transform: scale(0.5) rotate(225deg) translate(-34vw, -34vh);
+    -webkit-transform: scale(0.5) rotate(236deg) translate(-29vw, -29vh);
+            transform: scale(0.5) rotate(236deg) translate(-29vw, -29vh);
     opacity: 0.75;
   }
   100% {
@@ -400,29 +450,29 @@ header div .full-screen-illustration #plate {
   0% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0) rotate(359deg) translate(-50vw, -50vh);
-            transform: scale(0) rotate(359deg) translate(-50vw, -50vh);
+    -webkit-transform: scale(0) rotate(200deg) translate(66vw, 66vh);
+            transform: scale(0) rotate(200deg) translate(66vw, 66vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.25) rotate(190deg) translate(-23vw, -23vh);
-            transform: scale(0.25) rotate(190deg) translate(-23vw, -23vh);
+    -webkit-transform: scale(0.25) rotate(144deg) translate(-98vw, -98vh);
+            transform: scale(0.25) rotate(144deg) translate(-98vw, -98vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(147deg) translate(-49vw, -49vh);
-            transform: scale(0.5) rotate(147deg) translate(-49vw, -49vh);
+    -webkit-transform: scale(0.5) rotate(22deg) translate(39vw, 39vh);
+            transform: scale(0.5) rotate(22deg) translate(39vw, 39vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(225deg) translate(-34vw, -34vh);
-            transform: scale(0.5) rotate(225deg) translate(-34vw, -34vh);
+    -webkit-transform: scale(0.5) rotate(236deg) translate(-29vw, -29vh);
+            transform: scale(0.5) rotate(236deg) translate(-29vw, -29vh);
     opacity: 0.75;
   }
   100% {
@@ -445,29 +495,29 @@ header div .full-screen-illustration #cup_shadow {
   0% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0) rotate(350deg) translate(-11vw, -11vh);
-            transform: scale(0) rotate(350deg) translate(-11vw, -11vh);
+    -webkit-transform: scale(0) rotate(186deg) translate(40vw, 40vh);
+            transform: scale(0) rotate(186deg) translate(40vw, 40vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.25) rotate(292deg) translate(-32vw, -32vh);
-            transform: scale(0.25) rotate(292deg) translate(-32vw, -32vh);
+    -webkit-transform: scale(0.25) rotate(244deg) translate(99vw, 99vh);
+            transform: scale(0.25) rotate(244deg) translate(99vw, 99vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(119deg) translate(36vw, 36vh);
-            transform: scale(0.5) rotate(119deg) translate(36vw, 36vh);
+    -webkit-transform: scale(0.5) rotate(345deg) translate(-49vw, -49vh);
+            transform: scale(0.5) rotate(345deg) translate(-49vw, -49vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(224deg) translate(-26vw, -26vh);
-            transform: scale(0.5) rotate(224deg) translate(-26vw, -26vh);
+    -webkit-transform: scale(0.5) rotate(59deg) translate(18vw, 18vh);
+            transform: scale(0.5) rotate(59deg) translate(18vw, 18vh);
     opacity: 0.75;
   }
   100% {
@@ -483,29 +533,29 @@ header div .full-screen-illustration #cup_shadow {
   0% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0) rotate(350deg) translate(-11vw, -11vh);
-            transform: scale(0) rotate(350deg) translate(-11vw, -11vh);
+    -webkit-transform: scale(0) rotate(186deg) translate(40vw, 40vh);
+            transform: scale(0) rotate(186deg) translate(40vw, 40vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.25) rotate(292deg) translate(-32vw, -32vh);
-            transform: scale(0.25) rotate(292deg) translate(-32vw, -32vh);
+    -webkit-transform: scale(0.25) rotate(244deg) translate(99vw, 99vh);
+            transform: scale(0.25) rotate(244deg) translate(99vw, 99vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(119deg) translate(36vw, 36vh);
-            transform: scale(0.5) rotate(119deg) translate(36vw, 36vh);
+    -webkit-transform: scale(0.5) rotate(345deg) translate(-49vw, -49vh);
+            transform: scale(0.5) rotate(345deg) translate(-49vw, -49vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(224deg) translate(-26vw, -26vh);
-            transform: scale(0.5) rotate(224deg) translate(-26vw, -26vh);
+    -webkit-transform: scale(0.5) rotate(59deg) translate(18vw, 18vh);
+            transform: scale(0.5) rotate(59deg) translate(18vw, 18vh);
     opacity: 0.75;
   }
   100% {
@@ -528,29 +578,29 @@ header div .full-screen-illustration #cup {
   0% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0) rotate(158deg) translate(66vw, 66vh);
-            transform: scale(0) rotate(158deg) translate(66vw, 66vh);
+    -webkit-transform: scale(0) rotate(46deg) translate(-13vw, -13vh);
+            transform: scale(0) rotate(46deg) translate(-13vw, -13vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.25) rotate(198deg) translate(9vw, 9vh);
-            transform: scale(0.25) rotate(198deg) translate(9vw, 9vh);
+    -webkit-transform: scale(0.25) rotate(343deg) translate(-36vw, -36vh);
+            transform: scale(0.25) rotate(343deg) translate(-36vw, -36vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(102deg) translate(-32vw, -32vh);
-            transform: scale(0.5) rotate(102deg) translate(-32vw, -32vh);
+    -webkit-transform: scale(0.5) rotate(7deg) translate(30vw, 30vh);
+            transform: scale(0.5) rotate(7deg) translate(30vw, 30vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(349deg) translate(9vw, 9vh);
-            transform: scale(0.5) rotate(349deg) translate(9vw, 9vh);
+    -webkit-transform: scale(0.5) rotate(276deg) translate(-45vw, -45vh);
+            transform: scale(0.5) rotate(276deg) translate(-45vw, -45vh);
     opacity: 0.75;
   }
   100% {
@@ -566,29 +616,29 @@ header div .full-screen-illustration #cup {
   0% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0) rotate(158deg) translate(66vw, 66vh);
-            transform: scale(0) rotate(158deg) translate(66vw, 66vh);
+    -webkit-transform: scale(0) rotate(46deg) translate(-13vw, -13vh);
+            transform: scale(0) rotate(46deg) translate(-13vw, -13vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.25) rotate(198deg) translate(9vw, 9vh);
-            transform: scale(0.25) rotate(198deg) translate(9vw, 9vh);
+    -webkit-transform: scale(0.25) rotate(343deg) translate(-36vw, -36vh);
+            transform: scale(0.25) rotate(343deg) translate(-36vw, -36vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(102deg) translate(-32vw, -32vh);
-            transform: scale(0.5) rotate(102deg) translate(-32vw, -32vh);
+    -webkit-transform: scale(0.5) rotate(7deg) translate(30vw, 30vh);
+            transform: scale(0.5) rotate(7deg) translate(30vw, 30vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(349deg) translate(9vw, 9vh);
-            transform: scale(0.5) rotate(349deg) translate(9vw, 9vh);
+    -webkit-transform: scale(0.5) rotate(276deg) translate(-45vw, -45vh);
+            transform: scale(0.5) rotate(276deg) translate(-45vw, -45vh);
     opacity: 0.75;
   }
   100% {
@@ -611,29 +661,29 @@ header div .full-screen-illustration #tea {
   0% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0) rotate(136deg) translate(-46vw, -46vh);
-            transform: scale(0) rotate(136deg) translate(-46vw, -46vh);
+    -webkit-transform: scale(0) rotate(309deg) translate(-81vw, -81vh);
+            transform: scale(0) rotate(309deg) translate(-81vw, -81vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.25) rotate(50deg) translate(59vw, 59vh);
-            transform: scale(0.25) rotate(50deg) translate(59vw, 59vh);
+    -webkit-transform: scale(0.25) rotate(240deg) translate(39vw, 39vh);
+            transform: scale(0.25) rotate(240deg) translate(39vw, 39vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(178deg) translate(-10vw, -10vh);
-            transform: scale(0.5) rotate(178deg) translate(-10vw, -10vh);
+    -webkit-transform: scale(0.5) rotate(148deg) translate(-37vw, -37vh);
+            transform: scale(0.5) rotate(148deg) translate(-37vw, -37vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(121deg) translate(16vw, 16vh);
-            transform: scale(0.5) rotate(121deg) translate(16vw, 16vh);
+    -webkit-transform: scale(0.5) rotate(82deg) translate(-1vw, -1vh);
+            transform: scale(0.5) rotate(82deg) translate(-1vw, -1vh);
     opacity: 0.75;
   }
   100% {
@@ -649,29 +699,29 @@ header div .full-screen-illustration #tea {
   0% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0) rotate(136deg) translate(-46vw, -46vh);
-            transform: scale(0) rotate(136deg) translate(-46vw, -46vh);
+    -webkit-transform: scale(0) rotate(309deg) translate(-81vw, -81vh);
+            transform: scale(0) rotate(309deg) translate(-81vw, -81vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.25) rotate(50deg) translate(59vw, 59vh);
-            transform: scale(0.25) rotate(50deg) translate(59vw, 59vh);
+    -webkit-transform: scale(0.25) rotate(240deg) translate(39vw, 39vh);
+            transform: scale(0.25) rotate(240deg) translate(39vw, 39vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(178deg) translate(-10vw, -10vh);
-            transform: scale(0.5) rotate(178deg) translate(-10vw, -10vh);
+    -webkit-transform: scale(0.5) rotate(148deg) translate(-37vw, -37vh);
+            transform: scale(0.5) rotate(148deg) translate(-37vw, -37vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(121deg) translate(16vw, 16vh);
-            transform: scale(0.5) rotate(121deg) translate(16vw, 16vh);
+    -webkit-transform: scale(0.5) rotate(82deg) translate(-1vw, -1vh);
+            transform: scale(0.5) rotate(82deg) translate(-1vw, -1vh);
     opacity: 0.75;
   }
   100% {
@@ -694,29 +744,29 @@ header div .full-screen-illustration #teabag {
   0% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0) rotate(39deg) translate(62vw, 62vh);
-            transform: scale(0) rotate(39deg) translate(62vw, 62vh);
+    -webkit-transform: scale(0) rotate(223deg) translate(93vw, 93vh);
+            transform: scale(0) rotate(223deg) translate(93vw, 93vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.25) rotate(145deg) translate(-49vw, -49vh);
-            transform: scale(0.25) rotate(145deg) translate(-49vw, -49vh);
+    -webkit-transform: scale(0.25) rotate(351deg) translate(-28vw, -28vh);
+            transform: scale(0.25) rotate(351deg) translate(-28vw, -28vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(198deg) translate(18vw, 18vh);
-            transform: scale(0.5) rotate(198deg) translate(18vw, 18vh);
+    -webkit-transform: scale(0.5) rotate(2deg) translate(5vw, 5vh);
+            transform: scale(0.5) rotate(2deg) translate(5vw, 5vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(26deg) translate(0vw, 0vh);
-            transform: scale(0.5) rotate(26deg) translate(0vw, 0vh);
+    -webkit-transform: scale(0.5) rotate(306deg) translate(28vw, 28vh);
+            transform: scale(0.5) rotate(306deg) translate(28vw, 28vh);
     opacity: 0.75;
   }
   100% {
@@ -732,29 +782,29 @@ header div .full-screen-illustration #teabag {
   0% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0) rotate(39deg) translate(62vw, 62vh);
-            transform: scale(0) rotate(39deg) translate(62vw, 62vh);
+    -webkit-transform: scale(0) rotate(223deg) translate(93vw, 93vh);
+            transform: scale(0) rotate(223deg) translate(93vw, 93vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.25) rotate(145deg) translate(-49vw, -49vh);
-            transform: scale(0.25) rotate(145deg) translate(-49vw, -49vh);
+    -webkit-transform: scale(0.25) rotate(351deg) translate(-28vw, -28vh);
+            transform: scale(0.25) rotate(351deg) translate(-28vw, -28vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(198deg) translate(18vw, 18vh);
-            transform: scale(0.5) rotate(198deg) translate(18vw, 18vh);
+    -webkit-transform: scale(0.5) rotate(2deg) translate(5vw, 5vh);
+            transform: scale(0.5) rotate(2deg) translate(5vw, 5vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(26deg) translate(0vw, 0vh);
-            transform: scale(0.5) rotate(26deg) translate(0vw, 0vh);
+    -webkit-transform: scale(0.5) rotate(306deg) translate(28vw, 28vh);
+            transform: scale(0.5) rotate(306deg) translate(28vw, 28vh);
     opacity: 0.75;
   }
   100% {
@@ -777,29 +827,29 @@ header div .full-screen-illustration #bubble1 {
   0% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0) rotate(157deg) translate(-93vw, -93vh);
-            transform: scale(0) rotate(157deg) translate(-93vw, -93vh);
+    -webkit-transform: scale(0) rotate(35deg) translate(-9vw, -9vh);
+            transform: scale(0) rotate(35deg) translate(-9vw, -9vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.25) rotate(234deg) translate(100vw, 100vh);
-            transform: scale(0.25) rotate(234deg) translate(100vw, 100vh);
+    -webkit-transform: scale(0.25) rotate(256deg) translate(63vw, 63vh);
+            transform: scale(0.25) rotate(256deg) translate(63vw, 63vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(65deg) translate(8vw, 8vh);
-            transform: scale(0.5) rotate(65deg) translate(8vw, 8vh);
+    -webkit-transform: scale(0.5) rotate(360deg) translate(46vw, 46vh);
+            transform: scale(0.5) rotate(360deg) translate(46vw, 46vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(263deg) translate(-39vw, -39vh);
-            transform: scale(0.5) rotate(263deg) translate(-39vw, -39vh);
+    -webkit-transform: scale(0.5) rotate(333deg) translate(-9vw, -9vh);
+            transform: scale(0.5) rotate(333deg) translate(-9vw, -9vh);
     opacity: 0.75;
   }
   100% {
@@ -815,29 +865,29 @@ header div .full-screen-illustration #bubble1 {
   0% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0) rotate(157deg) translate(-93vw, -93vh);
-            transform: scale(0) rotate(157deg) translate(-93vw, -93vh);
+    -webkit-transform: scale(0) rotate(35deg) translate(-9vw, -9vh);
+            transform: scale(0) rotate(35deg) translate(-9vw, -9vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.25) rotate(234deg) translate(100vw, 100vh);
-            transform: scale(0.25) rotate(234deg) translate(100vw, 100vh);
+    -webkit-transform: scale(0.25) rotate(256deg) translate(63vw, 63vh);
+            transform: scale(0.25) rotate(256deg) translate(63vw, 63vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(65deg) translate(8vw, 8vh);
-            transform: scale(0.5) rotate(65deg) translate(8vw, 8vh);
+    -webkit-transform: scale(0.5) rotate(360deg) translate(46vw, 46vh);
+            transform: scale(0.5) rotate(360deg) translate(46vw, 46vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(263deg) translate(-39vw, -39vh);
-            transform: scale(0.5) rotate(263deg) translate(-39vw, -39vh);
+    -webkit-transform: scale(0.5) rotate(333deg) translate(-9vw, -9vh);
+            transform: scale(0.5) rotate(333deg) translate(-9vw, -9vh);
     opacity: 0.75;
   }
   100% {
@@ -860,29 +910,29 @@ header div .full-screen-illustration #bubble2 {
   0% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0) rotate(29deg) translate(-80vw, -80vh);
-            transform: scale(0) rotate(29deg) translate(-80vw, -80vh);
+    -webkit-transform: scale(0) rotate(360deg) translate(60vw, 60vh);
+            transform: scale(0) rotate(360deg) translate(60vw, 60vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.25) rotate(3deg) translate(-16vw, -16vh);
-            transform: scale(0.25) rotate(3deg) translate(-16vw, -16vh);
+    -webkit-transform: scale(0.25) rotate(135deg) translate(26vw, 26vh);
+            transform: scale(0.25) rotate(135deg) translate(26vw, 26vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(241deg) translate(-40vw, -40vh);
-            transform: scale(0.5) rotate(241deg) translate(-40vw, -40vh);
+    -webkit-transform: scale(0.5) rotate(306deg) translate(26vw, 26vh);
+            transform: scale(0.5) rotate(306deg) translate(26vw, 26vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(245deg) translate(13vw, 13vh);
-            transform: scale(0.5) rotate(245deg) translate(13vw, 13vh);
+    -webkit-transform: scale(0.5) rotate(314deg) translate(-29vw, -29vh);
+            transform: scale(0.5) rotate(314deg) translate(-29vw, -29vh);
     opacity: 0.75;
   }
   100% {
@@ -898,29 +948,29 @@ header div .full-screen-illustration #bubble2 {
   0% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0) rotate(29deg) translate(-80vw, -80vh);
-            transform: scale(0) rotate(29deg) translate(-80vw, -80vh);
+    -webkit-transform: scale(0) rotate(360deg) translate(60vw, 60vh);
+            transform: scale(0) rotate(360deg) translate(60vw, 60vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.25) rotate(3deg) translate(-16vw, -16vh);
-            transform: scale(0.25) rotate(3deg) translate(-16vw, -16vh);
+    -webkit-transform: scale(0.25) rotate(135deg) translate(26vw, 26vh);
+            transform: scale(0.25) rotate(135deg) translate(26vw, 26vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(241deg) translate(-40vw, -40vh);
-            transform: scale(0.5) rotate(241deg) translate(-40vw, -40vh);
+    -webkit-transform: scale(0.5) rotate(306deg) translate(26vw, 26vh);
+            transform: scale(0.5) rotate(306deg) translate(26vw, 26vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(245deg) translate(13vw, 13vh);
-            transform: scale(0.5) rotate(245deg) translate(13vw, 13vh);
+    -webkit-transform: scale(0.5) rotate(314deg) translate(-29vw, -29vh);
+            transform: scale(0.5) rotate(314deg) translate(-29vw, -29vh);
     opacity: 0.75;
   }
   100% {
@@ -943,29 +993,29 @@ header div .full-screen-illustration #bubble3 {
   0% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0) rotate(145deg) translate(-12vw, -12vh);
-            transform: scale(0) rotate(145deg) translate(-12vw, -12vh);
+    -webkit-transform: scale(0) rotate(199deg) translate(-5vw, -5vh);
+            transform: scale(0) rotate(199deg) translate(-5vw, -5vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.25) rotate(297deg) translate(49vw, 49vh);
-            transform: scale(0.25) rotate(297deg) translate(49vw, 49vh);
+    -webkit-transform: scale(0.25) rotate(343deg) translate(93vw, 93vh);
+            transform: scale(0.25) rotate(343deg) translate(93vw, 93vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(76deg) translate(50vw, 50vh);
-            transform: scale(0.5) rotate(76deg) translate(50vw, 50vh);
+    -webkit-transform: scale(0.5) rotate(142deg) translate(43vw, 43vh);
+            transform: scale(0.5) rotate(142deg) translate(43vw, 43vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(346deg) translate(-31vw, -31vh);
-            transform: scale(0.5) rotate(346deg) translate(-31vw, -31vh);
+    -webkit-transform: scale(0.5) rotate(324deg) translate(42vw, 42vh);
+            transform: scale(0.5) rotate(324deg) translate(42vw, 42vh);
     opacity: 0.75;
   }
   100% {
@@ -981,29 +1031,29 @@ header div .full-screen-illustration #bubble3 {
   0% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0) rotate(145deg) translate(-12vw, -12vh);
-            transform: scale(0) rotate(145deg) translate(-12vw, -12vh);
+    -webkit-transform: scale(0) rotate(199deg) translate(-5vw, -5vh);
+            transform: scale(0) rotate(199deg) translate(-5vw, -5vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.25) rotate(297deg) translate(49vw, 49vh);
-            transform: scale(0.25) rotate(297deg) translate(49vw, 49vh);
+    -webkit-transform: scale(0.25) rotate(343deg) translate(93vw, 93vh);
+            transform: scale(0.25) rotate(343deg) translate(93vw, 93vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(76deg) translate(50vw, 50vh);
-            transform: scale(0.5) rotate(76deg) translate(50vw, 50vh);
+    -webkit-transform: scale(0.5) rotate(142deg) translate(43vw, 43vh);
+            transform: scale(0.5) rotate(142deg) translate(43vw, 43vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(346deg) translate(-31vw, -31vh);
-            transform: scale(0.5) rotate(346deg) translate(-31vw, -31vh);
+    -webkit-transform: scale(0.5) rotate(324deg) translate(42vw, 42vh);
+            transform: scale(0.5) rotate(324deg) translate(42vw, 42vh);
     opacity: 0.75;
   }
   100% {
@@ -1026,29 +1076,29 @@ header div .full-screen-illustration #leaf1 {
   0% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0) rotate(351deg) translate(-73vw, -73vh);
-            transform: scale(0) rotate(351deg) translate(-73vw, -73vh);
+    -webkit-transform: scale(0) rotate(98deg) translate(-13vw, -13vh);
+            transform: scale(0) rotate(98deg) translate(-13vw, -13vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.25) rotate(321deg) translate(-2vw, -2vh);
-            transform: scale(0.25) rotate(321deg) translate(-2vw, -2vh);
+    -webkit-transform: scale(0.25) rotate(347deg) translate(76vw, 76vh);
+            transform: scale(0.25) rotate(347deg) translate(76vw, 76vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(192deg) translate(-45vw, -45vh);
-            transform: scale(0.5) rotate(192deg) translate(-45vw, -45vh);
+    -webkit-transform: scale(0.5) rotate(243deg) translate(27vw, 27vh);
+            transform: scale(0.5) rotate(243deg) translate(27vw, 27vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(299deg) translate(48vw, 48vh);
-            transform: scale(0.5) rotate(299deg) translate(48vw, 48vh);
+    -webkit-transform: scale(0.5) rotate(337deg) translate(46vw, 46vh);
+            transform: scale(0.5) rotate(337deg) translate(46vw, 46vh);
     opacity: 0.75;
   }
   100% {
@@ -1064,29 +1114,29 @@ header div .full-screen-illustration #leaf1 {
   0% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0) rotate(351deg) translate(-73vw, -73vh);
-            transform: scale(0) rotate(351deg) translate(-73vw, -73vh);
+    -webkit-transform: scale(0) rotate(98deg) translate(-13vw, -13vh);
+            transform: scale(0) rotate(98deg) translate(-13vw, -13vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.25) rotate(321deg) translate(-2vw, -2vh);
-            transform: scale(0.25) rotate(321deg) translate(-2vw, -2vh);
+    -webkit-transform: scale(0.25) rotate(347deg) translate(76vw, 76vh);
+            transform: scale(0.25) rotate(347deg) translate(76vw, 76vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(192deg) translate(-45vw, -45vh);
-            transform: scale(0.5) rotate(192deg) translate(-45vw, -45vh);
+    -webkit-transform: scale(0.5) rotate(243deg) translate(27vw, 27vh);
+            transform: scale(0.5) rotate(243deg) translate(27vw, 27vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob4");
             clip-path: url("#blob4");
-    -webkit-transform: scale(0.5) rotate(299deg) translate(48vw, 48vh);
-            transform: scale(0.5) rotate(299deg) translate(48vw, 48vh);
+    -webkit-transform: scale(0.5) rotate(337deg) translate(46vw, 46vh);
+            transform: scale(0.5) rotate(337deg) translate(46vw, 46vh);
     opacity: 0.75;
   }
   100% {
@@ -1109,29 +1159,29 @@ header div .full-screen-illustration #leaf2 {
   0% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0) rotate(12deg) translate(-43vw, -43vh);
-            transform: scale(0) rotate(12deg) translate(-43vw, -43vh);
+    -webkit-transform: scale(0) rotate(283deg) translate(-83vw, -83vh);
+            transform: scale(0) rotate(283deg) translate(-83vw, -83vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.25) rotate(266deg) translate(65vw, 65vh);
-            transform: scale(0.25) rotate(266deg) translate(65vw, 65vh);
+    -webkit-transform: scale(0.25) rotate(34deg) translate(93vw, 93vh);
+            transform: scale(0.25) rotate(34deg) translate(93vw, 93vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(102deg) translate(37vw, 37vh);
-            transform: scale(0.5) rotate(102deg) translate(37vw, 37vh);
+    -webkit-transform: scale(0.5) rotate(169deg) translate(-39vw, -39vh);
+            transform: scale(0.5) rotate(169deg) translate(-39vw, -39vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(64deg) translate(18vw, 18vh);
-            transform: scale(0.5) rotate(64deg) translate(18vw, 18vh);
+    -webkit-transform: scale(0.5) rotate(299deg) translate(-5vw, -5vh);
+            transform: scale(0.5) rotate(299deg) translate(-5vw, -5vh);
     opacity: 0.75;
   }
   100% {
@@ -1147,29 +1197,29 @@ header div .full-screen-illustration #leaf2 {
   0% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0) rotate(12deg) translate(-43vw, -43vh);
-            transform: scale(0) rotate(12deg) translate(-43vw, -43vh);
+    -webkit-transform: scale(0) rotate(283deg) translate(-83vw, -83vh);
+            transform: scale(0) rotate(283deg) translate(-83vw, -83vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.25) rotate(266deg) translate(65vw, 65vh);
-            transform: scale(0.25) rotate(266deg) translate(65vw, 65vh);
+    -webkit-transform: scale(0.25) rotate(34deg) translate(93vw, 93vh);
+            transform: scale(0.25) rotate(34deg) translate(93vw, 93vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(102deg) translate(37vw, 37vh);
-            transform: scale(0.5) rotate(102deg) translate(37vw, 37vh);
+    -webkit-transform: scale(0.5) rotate(169deg) translate(-39vw, -39vh);
+            transform: scale(0.5) rotate(169deg) translate(-39vw, -39vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob5");
             clip-path: url("#blob5");
-    -webkit-transform: scale(0.5) rotate(64deg) translate(18vw, 18vh);
-            transform: scale(0.5) rotate(64deg) translate(18vw, 18vh);
+    -webkit-transform: scale(0.5) rotate(299deg) translate(-5vw, -5vh);
+            transform: scale(0.5) rotate(299deg) translate(-5vw, -5vh);
     opacity: 0.75;
   }
   100% {
@@ -1192,29 +1242,29 @@ header div .full-screen-illustration #leaf3 {
   0% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0) rotate(106deg) translate(-36vw, -36vh);
-            transform: scale(0) rotate(106deg) translate(-36vw, -36vh);
+    -webkit-transform: scale(0) rotate(14deg) translate(-14vw, -14vh);
+            transform: scale(0) rotate(14deg) translate(-14vw, -14vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.25) rotate(125deg) translate(5vw, 5vh);
-            transform: scale(0.25) rotate(125deg) translate(5vw, 5vh);
+    -webkit-transform: scale(0.25) rotate(63deg) translate(67vw, 67vh);
+            transform: scale(0.25) rotate(63deg) translate(67vw, 67vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(297deg) translate(-15vw, -15vh);
-            transform: scale(0.5) rotate(297deg) translate(-15vw, -15vh);
+    -webkit-transform: scale(0.5) rotate(121deg) translate(-5vw, -5vh);
+            transform: scale(0.5) rotate(121deg) translate(-5vw, -5vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(54deg) translate(-6vw, -6vh);
-            transform: scale(0.5) rotate(54deg) translate(-6vw, -6vh);
+    -webkit-transform: scale(0.5) rotate(282deg) translate(42vw, 42vh);
+            transform: scale(0.5) rotate(282deg) translate(42vw, 42vh);
     opacity: 0.75;
   }
   100% {
@@ -1230,29 +1280,29 @@ header div .full-screen-illustration #leaf3 {
   0% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0) rotate(106deg) translate(-36vw, -36vh);
-            transform: scale(0) rotate(106deg) translate(-36vw, -36vh);
+    -webkit-transform: scale(0) rotate(14deg) translate(-14vw, -14vh);
+            transform: scale(0) rotate(14deg) translate(-14vw, -14vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.25) rotate(125deg) translate(5vw, 5vh);
-            transform: scale(0.25) rotate(125deg) translate(5vw, 5vh);
+    -webkit-transform: scale(0.25) rotate(63deg) translate(67vw, 67vh);
+            transform: scale(0.25) rotate(63deg) translate(67vw, 67vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(297deg) translate(-15vw, -15vh);
-            transform: scale(0.5) rotate(297deg) translate(-15vw, -15vh);
+    -webkit-transform: scale(0.5) rotate(121deg) translate(-5vw, -5vh);
+            transform: scale(0.5) rotate(121deg) translate(-5vw, -5vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob1");
             clip-path: url("#blob1");
-    -webkit-transform: scale(0.5) rotate(54deg) translate(-6vw, -6vh);
-            transform: scale(0.5) rotate(54deg) translate(-6vw, -6vh);
+    -webkit-transform: scale(0.5) rotate(282deg) translate(42vw, 42vh);
+            transform: scale(0.5) rotate(282deg) translate(42vw, 42vh);
     opacity: 0.75;
   }
   100% {
@@ -1275,29 +1325,29 @@ header div .full-screen-illustration #tea_overlay {
   0% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0) rotate(213deg) translate(-7vw, -7vh);
-            transform: scale(0) rotate(213deg) translate(-7vw, -7vh);
+    -webkit-transform: scale(0) rotate(322deg) translate(14vw, 14vh);
+            transform: scale(0) rotate(322deg) translate(14vw, 14vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.25) rotate(253deg) translate(57vw, 57vh);
-            transform: scale(0.25) rotate(253deg) translate(57vw, 57vh);
+    -webkit-transform: scale(0.25) rotate(36deg) translate(79vw, 79vh);
+            transform: scale(0.25) rotate(36deg) translate(79vw, 79vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(331deg) translate(-7vw, -7vh);
-            transform: scale(0.5) rotate(331deg) translate(-7vw, -7vh);
+    -webkit-transform: scale(0.5) rotate(193deg) translate(-25vw, -25vh);
+            transform: scale(0.5) rotate(193deg) translate(-25vw, -25vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(265deg) translate(-37vw, -37vh);
-            transform: scale(0.5) rotate(265deg) translate(-37vw, -37vh);
+    -webkit-transform: scale(0.5) rotate(235deg) translate(10vw, 10vh);
+            transform: scale(0.5) rotate(235deg) translate(10vw, 10vh);
     opacity: 0.75;
   }
   100% {
@@ -1313,29 +1363,29 @@ header div .full-screen-illustration #tea_overlay {
   0% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0) rotate(213deg) translate(-7vw, -7vh);
-            transform: scale(0) rotate(213deg) translate(-7vw, -7vh);
+    -webkit-transform: scale(0) rotate(322deg) translate(14vw, 14vh);
+            transform: scale(0) rotate(322deg) translate(14vw, 14vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.25) rotate(253deg) translate(57vw, 57vh);
-            transform: scale(0.25) rotate(253deg) translate(57vw, 57vh);
+    -webkit-transform: scale(0.25) rotate(36deg) translate(79vw, 79vh);
+            transform: scale(0.25) rotate(36deg) translate(79vw, 79vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(331deg) translate(-7vw, -7vh);
-            transform: scale(0.5) rotate(331deg) translate(-7vw, -7vh);
+    -webkit-transform: scale(0.5) rotate(193deg) translate(-25vw, -25vh);
+            transform: scale(0.5) rotate(193deg) translate(-25vw, -25vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob2");
             clip-path: url("#blob2");
-    -webkit-transform: scale(0.5) rotate(265deg) translate(-37vw, -37vh);
-            transform: scale(0.5) rotate(265deg) translate(-37vw, -37vh);
+    -webkit-transform: scale(0.5) rotate(235deg) translate(10vw, 10vh);
+            transform: scale(0.5) rotate(235deg) translate(10vw, 10vh);
     opacity: 0.75;
   }
   100% {
@@ -1358,29 +1408,29 @@ header div .full-screen-illustration #teabag_label {
   0% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0) rotate(319deg) translate(-20vw, -20vh);
-            transform: scale(0) rotate(319deg) translate(-20vw, -20vh);
+    -webkit-transform: scale(0) rotate(172deg) translate(-80vw, -80vh);
+            transform: scale(0) rotate(172deg) translate(-80vw, -80vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.25) rotate(139deg) translate(-84vw, -84vh);
-            transform: scale(0.25) rotate(139deg) translate(-84vw, -84vh);
+    -webkit-transform: scale(0.25) rotate(328deg) translate(98vw, 98vh);
+            transform: scale(0.25) rotate(328deg) translate(98vw, 98vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(350deg) translate(-4vw, -4vh);
-            transform: scale(0.5) rotate(350deg) translate(-4vw, -4vh);
+    -webkit-transform: scale(0.5) rotate(315deg) translate(39vw, 39vh);
+            transform: scale(0.5) rotate(315deg) translate(39vw, 39vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(277deg) translate(17vw, 17vh);
-            transform: scale(0.5) rotate(277deg) translate(17vw, 17vh);
+    -webkit-transform: scale(0.5) rotate(29deg) translate(40vw, 40vh);
+            transform: scale(0.5) rotate(29deg) translate(40vw, 40vh);
     opacity: 0.75;
   }
   100% {
@@ -1396,29 +1446,29 @@ header div .full-screen-illustration #teabag_label {
   0% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0) rotate(319deg) translate(-20vw, -20vh);
-            transform: scale(0) rotate(319deg) translate(-20vw, -20vh);
+    -webkit-transform: scale(0) rotate(172deg) translate(-80vw, -80vh);
+            transform: scale(0) rotate(172deg) translate(-80vw, -80vh);
     opacity: 0;
   }
   25% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.25) rotate(139deg) translate(-84vw, -84vh);
-            transform: scale(0.25) rotate(139deg) translate(-84vw, -84vh);
+    -webkit-transform: scale(0.25) rotate(328deg) translate(98vw, 98vh);
+            transform: scale(0.25) rotate(328deg) translate(98vw, 98vh);
     opacity: 0.25;
   }
   50% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(350deg) translate(-4vw, -4vh);
-            transform: scale(0.5) rotate(350deg) translate(-4vw, -4vh);
+    -webkit-transform: scale(0.5) rotate(315deg) translate(39vw, 39vh);
+            transform: scale(0.5) rotate(315deg) translate(39vw, 39vh);
     opacity: 0.5;
   }
   75% {
     -webkit-clip-path: url("#blob3");
             clip-path: url("#blob3");
-    -webkit-transform: scale(0.5) rotate(277deg) translate(17vw, 17vh);
-            transform: scale(0.5) rotate(277deg) translate(17vw, 17vh);
+    -webkit-transform: scale(0.5) rotate(29deg) translate(40vw, 40vh);
+            transform: scale(0.5) rotate(29deg) translate(40vw, 40vh);
     opacity: 0.75;
   }
   100% {
